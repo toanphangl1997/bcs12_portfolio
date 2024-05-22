@@ -1,0 +1,253 @@
+header .collapse .nav-link:hover {
+  color: green !important ;
+}
+
+header .collapse .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  width: 0;
+  height: 4px;
+  transition: all 0.5s;
+}
+
+header .collapse .nav-link:hover::before {
+  width: 100%;
+}
+header .collapse .active {
+  color: green !important;
+}
+
+header .collapse .active::before {
+  width: 100%;
+}
+
+/* CSS carousel  */
+
+.cyber_carousel .carousel-item .carousel_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: 50%;
+    top: 50%; */
+  /* transform: translateX(-50%);
+    transform: translateY(-50%); */
+  /* transform: translate(-50%, -50% ); */
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background-color: rgba(39, 43, 54, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cyber_carousel .carousel-item .carousel_content img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* .cyber_carousel .carousel_item::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba (39, 43 ,54 ,0.5);
+} */
+
+/* CSS project  */
+
+.cyber_project .nav button.active {
+  background-color: green;
+  color: white !important;
+  border-color: green !important;
+}
+
+/* .cyber_project .col-4 p {
+    padding: 30px;
+    background-color: red;
+  } */
+
+.cyber_project .project_item img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.cyber_project .project_item {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-radius: 12px;
+  margin: 15px 15px;
+  /* animation-name: zoomOut; */
+  /* animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-delay: 10s; */
+}
+
+.cyber_project .project_item_text {
+  text-align: center;
+  padding: 20px 15px 30px 15px;
+  border: 2px solid transparent;
+  border-radius: 0 0 12px 12px;
+  border-top: none;
+  transition: all 0.5s;
+}
+
+.cyber_project .project_item:hover .project_item_text {
+  border-color: green;
+}
+
+.project_item_text h3 {
+  font-size: 23px;
+}
+.project_item_text h3:hover {
+  color: green;
+}
+
+/* Available  */
+
+.cyber_available {
+  color: white;
+  background-image: url(../img/3.jpg);
+  padding: 80px 0;
+  position: relative;
+}
+
+.cyber_available::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 10, 12, 0.72);
+}
+
+.cyber_available .cyber_avai_item {
+  padding: 40px 70px;
+  background: rgba(255, 250, 250, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.5s;
+  text-align: center;
+}
+
+.cyber_available .cyber_avai_item:hover {
+  border-color: white;
+  background-color: black;
+}
+
+.cyber_avai_item i {
+  font-size: 48px;
+  color: rgb(12, 171, 12);
+  margin-bottom: 25px;
+}
+
+.cyber_avai_item h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* back to top  */
+
+.back_to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: green;
+  color: white;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.5;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* laptop first : max width  */
+/* Lưu ý khi xử lí reponsive với max-width, luôn luôn điều chỉnh có các màn hình lớn xuống nhỏ  */
+/* @media screen and ( max-width:1200px) {
+  header .navbar-brand span {
+    color: yellow !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+  header .navbar-brand span {
+    color: orange !important;
+  }
+} */
+
+@media screen and (min-width: 820px) {
+  header .navbar-brand span {
+    color: green !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cyber_available .cyber_avai_item {
+    margin-top: 20px;
+  }
+}
+
